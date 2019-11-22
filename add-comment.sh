@@ -41,7 +41,7 @@ delete_comment_if_exists() {
 }
 
 post_gif() {
-	curl -sSL -H "${AUTH_HEADER}" -H "${API_HEADER}" -d '{"body":"![finger.gif]('${GIF_URL}')"}' -H "Content-Type: application/json" -X POST "${URI}/repos/${GITHUB_REPOSITORY}/issues/${NUMBER}/comments"
+	curl -sSL -H "${AUTH_HEADER}" -H "${API_HEADER}" -d '{"body":"Build Fail ![finger.gif]('${GIF_URL}')"}' -H "Content-Type: application/json" -X POST "${URI}/repos/${GITHUB_REPOSITORY}/issues/${NUMBER}/comments"
 }
 
 get_checks() {
